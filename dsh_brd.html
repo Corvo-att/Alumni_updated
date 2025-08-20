@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERU Alumni Portal - Welcome</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="resources/logo_bare.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-dash">
+    <div class="bg-main" id="navbar">
+      <!-- Header -->
+      <header class="bg-nav text-white shadow-lg">
+        <div class="w-full px-4 py-4 flex items-center justify-between">
+          <!-- Logo -->
+          <img
+            src="resources/logo_transparent.png"
+            alt="ERU Logo"
+            class="w-10 h-10"
+          />
+
+          <!-- Right Section -->
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-indigo-600 font-bold"
+            >
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="hidden sm:flex items-center space-x-2">
+              <button
+                id="dashboard"
+                class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition whitespace-nowrap"
+              >
+                <i class="fas fa-dashboard mr-2"></i>Dashboard
+              </button>
+              <button
+                id="notifications"
+                class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition whitespace-nowrap"
+              >
+                <i class="fas fa-bell mr-2"></i>Notifications
+              </button>
+              <button
+                id="logout"
+                class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition whitespace-nowrap"
+              >
+                <i class="fas fa-sign-out-alt mr-2"></i>Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="container mx-auto px-4 py-8">
+        <!-- Stats Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <!-- Total Alumni -->
+          <div
+            class="stat-card bg-white rounded-xl shadow-md p-6 flex flex-col items-center"
+          >
+            <div class="text-5xl font-bold text-indigo-600 mb-2">2,543</div>
+            <div class="text-gray-500 text-lg">Total Alumni</div>
+            <div class="mt-4 w-full bg-gray-200 rounded-full h-2.5">
+              <div
+                class="bg-indigo-600 h-2.5 rounded-full"
+                style="width: 100%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- New Graduates -->
+          <div
+            class="stat-card bg-white rounded-xl shadow-md p-6 flex flex-col items-center"
+          >
+            <div class="text-5xl font-bold text-green-600 mb-2">156</div>
+            <div class="text-gray-500 text-lg">New Graduates</div>
+            <div class="mt-4 w-full bg-gray-200 rounded-full h-2.5">
+              <div
+                class="bg-green-600 h-2.5 rounded-full"
+                style="width: 60%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Employment Rate -->
+          <div
+            class="stat-card bg-white rounded-xl shadow-md p-6 flex flex-col items-center"
+          >
+            <div class="text-5xl font-bold text-blue-600 mb-2">89%</div>
+            <div class="text-gray-500 text-lg">Employment Rate</div>
+            <div class="mt-4 w-full bg-gray-200 rounded-full h-2.5">
+              <div
+                class="bg-blue-600 h-2.5 rounded-full"
+                style="width: 89%"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Personal Information -->
+          <div
+            class="feature-card bg-white rounded-xl shadow-md overflow-hidden"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 text-xl mr-4"
+                >
+                  <i class="fas fa-user"></i>
+                </div>
+                <h3 class="text-xl font-semibold">Personal Information</h3>
+              </div>
+              <p class="text-gray-600 mb-6">
+                Update your identification details and keep your profile
+                current.
+              </p>
+              <button
+                id="update-info"
+                class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition"
+              >
+                Update Information
+              </button>
+            </div>
+            <div class="bg-indigo-50 px-6 py-4 text-indigo-600 text-sm">
+              <i class="fas fa-info-circle mr-2"></i> Last updated 3 days ago
+            </div>
+          </div>
+
+          <!-- Academic Information -->
+          <div
+            class="feature-card bg-white rounded-xl shadow-md overflow-hidden"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xl mr-4"
+                >
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="text-xl font-semibold">Academic Information</h3>
+              </div>
+              <p class="text-gray-600 mb-6">
+                Manage your educational background and academic achievements.
+              </p>
+              <button
+                id="view-records"
+                class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition"
+              >
+                View Records
+              </button>
+            </div>
+            <div class="bg-green-50 px-6 py-4 text-green-600 text-sm">
+              <i class="fas fa-info-circle mr-2"></i> Complete your profile to
+              100%
+            </div>
+          </div>
+
+          <!-- Work Experience -->
+          <div
+            class="feature-card bg-white rounded-xl shadow-md overflow-hidden"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-xl mr-4"
+                >
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <h3 class="text-xl font-semibold">Work Experience</h3>
+              </div>
+              <p class="text-gray-600 mb-6">
+                Track your professional journey and career milestones.
+              </p>
+              <br />
+              <button
+                id="add-experience"
+                class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+              >
+                Add Experience
+              </button>
+            </div>
+            <div class="bg-blue-50 px-6 py-4 text-blue-600 text-sm">
+              <i class="fas fa-info-circle mr-2"></i> 5 positions added
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity Section -->
+        <div class="mt-12 bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="p-6 border-b border-gray-200">
+            <h2 class="text-xl font-semibold flex items-center">
+              <i class="fas fa-history mr-3 text-indigo-600"></i> Recent
+              Activity
+            </h2>
+          </div>
+          <div class="divide-y divide-gray-200">
+            <div class="p-6 flex items-start">
+              <div
+                class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4"
+              >
+                <i class="fas fa-user-edit"></i>
+              </div>
+              <div>
+                <p class="font-medium">You updated your profile information</p>
+                <p class="text-gray-500 text-sm">2 hours ago</p>
+              </div>
+            </div>
+            <div class="p-6 flex items-start">
+              <div
+                class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 mr-4"
+              >
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div>
+                <p class="font-medium">
+                  New alumni from Computer Science department
+                </p>
+                <p class="text-gray-500 text-sm">1 day ago</p>
+              </div>
+            </div>
+            <div class="p-6 flex items-start">
+              <div
+                class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4"
+              >
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div>
+                <p class="font-medium">
+                  You added a new work experience at TechCorp
+                </p>
+                <p class="text-gray-500 text-sm">3 days ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 bg-gray-50 text-center">
+            <button
+              class="text-indigo-600 font-medium hover:text-indigo-800 transition"
+            >
+              View All Activity <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <footer class="p-6">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+          <p>© 2023 Alumni Network. All rights reserved.</p>
+          <div class="mt-2 flex justify-center space-x-4">
+            <a href="#" class="hover:text-indigo-600"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-indigo-600"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-indigo-600"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="hover:text-indigo-600"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Simple animation for stat cards on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        const statCards = document.querySelectorAll(".stat-card");
+        statCards.forEach((card, index) => {
+          setTimeout(() => {
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+          }, index * 100);
+        });
+
+        // Initially set opacity to 0 and position for animation
+        statCards.forEach((card) => {
+          card.style.opacity = "0";
+          card.style.transform = "translateY(20px)";
+          card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+        });
+      });
+
+      document.getElementById("logout").addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = "index.html";
+      });
+
+      document
+        .getElementById("dashboard")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          window.location.href = "dsply_dsh_brd.html";
+        });
+
+      document
+        .getElementById("update-info")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          window.location.href = "personal_info.html";
+        });
+
+      document
+        .getElementById("add-experience")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          window.location.href = "exprnc_entry.html";
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERU Alumni - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="resources/logo_bare.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="body flex flex-col md:flex-row">
+      <!-- Left Side  -->
+      <div
+        class="bg-main text-white md:w-1/3 flex flex-col justify-center items-center p-10 hidden md:flex"
+      >
+        <div class="max-w-md text-center">
+          <div class="flex justify-center mb-8">
+ 
+            <!-- Logo -->
+            <img
+                src="resources/logo_bare.png"
+                alt="ERU Logo"
+                class="w-40 h-25"
+            />
+          </div>
+          <h1 class="text-4xl font-bold mb-4">ERU Alumni Network</h1>
+          <p class="text-lg opacity-90">
+            Connect with your fellow alumni, explore opportunities, and stay
+            updated with your alma mater.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Side  -->
+      <div
+        class="w-full md:w-2/3 flex flex-col justify-center items-center p-8"
+      >
+        <div class="w-full max-w-md">
+          <div class="text-center mb-10 md:hidden">
+            <i class="fas fa-graduation-cap text-5xl text-blue-600 mb-4"></i>
+            <h1 class="text-3xl font-bold text-gray-800">ERU Alumni</h1>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-1">Welcome back</h2>
+            <p class="text-gray-600 mb-8">Sign in to your alumni account</p>
+
+            <form id="loginForm2" class="space-y-6">
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Email</label
+                >
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                  >
+                    <i class="fas fa-envelope text-gray-400"></i>
+                  </div>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="pl-10 w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent input-focus transition duration-200"
+                    placeholder="your@email.com"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="password"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Password</label
+                >
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                  >
+                    <i class="fas fa-lock text-gray-400"></i>
+                  </div>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                    class="pl-10 w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent input-focus transition duration-200"
+                    placeholder="••••••••"
+                  />
+                  <button
+                    type="button"
+                    class="absolute right-3 top-3 text-gray-400 hover:text-gray-600"
+                    id="togglePassword"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+
+              <div class="flex items-center justify-between p-4">
+                <div class="flex items-center">
+                  <input
+                    id="remember-me"
+                    name="remember-me"
+                    type="checkbox"
+                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  />
+                  <label
+                    for="remember-me"
+                    class="ml-2 block text-sm text-gray-700"
+                    >Remember me</label
+                  >
+                </div>
+
+                <div class="text-sm">
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 hover:text-blue-500"
+                    >Forgot password?</a
+                  >
+                </div>
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  Sign in
+                </button>
+              </div>
+            </form>
+
+            <div class="mt-6">
+              <div class="relative">
+                <div class="absolute inset-0 flex items-center">
+                  <div class="w-full border-t border-gray-300"></div>
+                </div>
+                <div class="relative flex justify-center text-sm">
+                  <span class="px-2 bg-white text-gray-500"
+                    >Or continue with</span
+                  >
+                </div>
+              </div>
+
+              <div class="mt-6 grid grid-cols-3 gap-3">
+                <a
+                  href="#"
+                  class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+                >
+                  <i class="fab fa-google text-red-500"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+                >
+                  <i class="fab fa-facebook-f text-blue-600"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+                >
+                  <i class="fab fa-linkedin-in text-blue-500"></i>
+                </a>
+              </div>
+            </div>
+            
+            </form>
+
+            <div class="mt-6 text-center">
+              <p class="text-gray-600">
+                Don't have an account?
+                <a
+                  href="https://alumni-eru.vercel.app/login.html#"
+                  class="text-blue-600 font-medium hover:text-blue-800 hover:underline"
+                  >Register here</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>© 2023 ERU Alumni. All rights reserved.</p>
+            <div class="mt-2 flex justify-center space-x-4">
+          <a href="#" class="hover:text-indigo-600"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" class="hover:text-indigo-600"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="hover:text-indigo-600"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="#" class="hover:text-indigo-600"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Toggle password visibility
+      document
+        .getElementById("togglePassword")
+        .addEventListener("click", function () {
+          const passwordInput = document.getElementById("password");
+          const icon = this.querySelector("i");
+
+          if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+          } else {
+            passwordInput.type = "password";
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+          }
+        });
+
+      // login submission
+      document
+        .getElementById("loginForm2")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+         //same deal
+          window.location.href = "dsh_brd.html";
+        });
+    </script>
+  </body>
+</html>
