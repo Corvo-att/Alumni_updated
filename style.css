@@ -50,6 +50,43 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------*/
 
+.body2 {
+  background-image: url("resources/background.png");
+  margin: 2%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gradient-bg-reg {
+  background: linear-gradient(135deg, #a5110f 0%, #000000 100%);
+}
+.input-focus:focus {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+.checkbox:checked {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+
 .bg-main {
   background-image: url("resources/eru_bg.jpg");
   background-repeat: no-repeat;
