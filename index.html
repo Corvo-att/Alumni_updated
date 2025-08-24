@@ -3,47 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ERU Alumni Portal - Login</title>
+    <title>ERU Alumni - Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/x-icon" href="resources/logo_bare.ico" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="body bg-gray-100 flex flex-col">
-    <!-- Header -->
-<header class="bg-nav text-white shadow-lg">
-  <div class="w-full px-4 py-4 flex items-center justify-between">
-    <!-- Logo -->
-    <img
-      src="resources/logo_transparent.png"
-      alt="ERU Logo"
-      class="w-10 h-10"
-    />
+  <body>
+    <div class="body flex flex-col md:flex-row">
+      <!-- Left Side  -->
+      <div
+        class="bg-main text-white md:w-1/3 flex flex-col justify-center items-center p-10 hidden md:flex"
+      >
+        <div class="max-w-md text-center">
+          <div class="flex justify-center mb-8">
+ 
+            <!-- Logo -->
+            <img
+                src="resources/logo_bare.png"
+                alt="ERU Logo"
+                class="w-40 h-25"
+            />
+          </div>
+          <h1 class="text-4xl font-bold mb-4">ERU Alumni Network</h1>
+          <p class="text-lg opacity-90">
+            Connect with your fellow alumni, explore opportunities, and stay
+            updated with your alma mater.
+          </p>
+        </div>
+      </div>
 
-  </div>
-</header>
-
-
-    <!-- Main Content -->
-    <main class="flex-grow flex items-center justify-center p-4">
-      <div class="w-full max-w-md">
-        <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
-          <div class="bg-banner py-4 px-6">
-            <h2 class="text-2xl font-bold text-white text-center">
-              Welcome Back Alumni!
-            </h2>
+      <!-- Right Side  -->
+      <div
+        class="w-full md:w-2/3 flex flex-col justify-center items-center p-8"
+      >
+        <div class="w-full max-w-md">
+          <div class="text-center mb-10 md:hidden">
+            <i class="fas fa-graduation-cap text-5xl text-blue-600 mb-4"></i>
+            <h1 class="text-3xl font-bold text-gray-800">ERU Alumni</h1>
           </div>
 
-          <div class="p-8">
-            <form id="loginForm" class="space-y-6">
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-1">Welcome back</h2>
+            <p class="text-gray-600 mb-8">Sign in to your alumni account</p>
+
+            <form id="loginForm2" class="space-y-6">
               <div>
                 <label
                   for="email"
                   class="block text-sm font-medium text-gray-700 mb-1"
-                  >Email Address</label
+                  >Email</label
                 >
                 <div class="relative">
                   <div
@@ -56,7 +72,7 @@
                     id="email"
                     name="email"
                     required
-                    class="pl-10 w-full px-4 py-3 rounded-lg border border-gray-300 input-focus focus:outline-none"
+                    class="pl-10 w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent input-focus transition duration-200"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -79,7 +95,7 @@
                     id="password"
                     name="password"
                     required
-                    class="pl-10 w-full px-4 py-3 rounded-lg border border-gray-300 input-focus focus:outline-none"
+                    class="pl-10 w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent input-focus transition duration-200"
                     placeholder="••••••••"
                   />
                   <button
@@ -90,9 +106,8 @@
                     <i class="fas fa-eye"></i>
                   </button>
                 </div>
-              </div>
 
-              <div class="flex items-center justify-between">
+              <div class="flex items-center justify-between p-4">
                 <div class="flex items-center">
                   <input
                     id="remember-me"
@@ -124,7 +139,7 @@
                   Sign in
                 </button>
               </div>
-            </form>
+            
 
             <div class="mt-6">
               <div class="relative">
@@ -159,24 +174,24 @@
                 </a>
               </div>
             </div>
+            
+            </form>
 
             <div class="mt-6 text-center">
-              <p class="text-sm text-gray-600">
+              <p class="text-gray-600">
                 Don't have an account?
                 <a
-                  href="#"
-                  class="font-medium text-blue-600 hover:text-blue-500"
+                  href="reg.html"
+                  class="text-blue-600 font-medium hover:text-blue-800 hover:underline"
                   >Register here</a
                 >
               </p>
             </div>
           </div>
-        </div>
 
-    <footer class="mt-6 text-center text-sm text-gray-500 font-bold bg-gray-100 py-4 rounded-lg" >
-      <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
-        <p>© 2023 Alumni Network. All rights reserved.</p>
-        <div class="mt-2 flex justify-center space-x-4">
+          <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>© 2023 ERU Alumni. All rights reserved.</p>
+            <div class="mt-2 flex justify-center space-x-4">
           <a href="#" class="hover:text-indigo-600"
             ><i class="fab fa-facebook"></i
           ></a>
@@ -190,9 +205,10 @@
             ><i class="fab fa-instagram"></i
           ></a>
         </div>
+          </div>
+        </div>
       </div>
-    </footer>
-    </main>
+    </div>
 
     <script>
       // Toggle password visibility
@@ -204,20 +220,22 @@
 
           if (passwordInput.type === "password") {
             passwordInput.type = "text";
-            icon.classList.replace("fa-eye", "fa-eye-slash");
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
           } else {
             passwordInput.type = "password";
-            icon.classList.replace("fa-eye-slash", "fa-eye");
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
           }
         });
 
-      // Login submission
+      // login submission
       document
-        .getElementById("loginForm")
+        .getElementById("loginForm2")
         .addEventListener("submit", function (e) {
           e.preventDefault();
-          // Here i will isa normally handle the login logic
-          alert("Login functionality would be implemented here!");
+
+         //same deal
           window.location.href = "dsh_brd.html";
         });
     </script>

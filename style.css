@@ -10,16 +10,11 @@
 }
 
 .bg-nav {
-  background: linear-gradient(
-    135deg,
-    #cec9c9d0 0%,
-    #b41f1fec 50%,
-    #050000ec 100%
-  );
+  background: linear-gradient(170deg, #000000 40%, #ff0000ec 100%);
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #610a0a 0%, #000000 100%);
+  background: linear-gradient(180deg, #290303 0%, #8b1313 100%);
   transition: all 0.3s ease;
 }
 
@@ -117,7 +112,7 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 .bg-banner {
-  background: linear-gradient(135deg, #c01a1a 0%, #000000 100%);
+  background: linear-gradient(175deg, #000000 20%, #bb0808 100%);
 }
 
 .card-shadow {
@@ -134,11 +129,23 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 .gradient-bg-btn {
-  background: linear-gradient(135deg, #b41919 0%, #000000 100%);
+  background: linear-gradient(180deg, #290303 0%, #8b1313 100%);
+}
+
+.gradient-bg-line {
+  background-color: #5a0000;
 }
 
 .input-focus:focus {
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+.input-highlight {
+  transition: all 0.3s ease;
+}
+.input-highlight:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  border-color: #3b82f6;
 }
 
 .shake {
@@ -166,6 +173,7 @@
 
 .sidebar {
   transition: all 0.3s;
+  background: linear-gradient(270deg, #660604af 0%, #050000ec 100%);
 }
 
 @media (max-width: 768px) {
@@ -188,8 +196,29 @@
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.sidebar {
-  background: linear-gradient(270deg, #530100b9 0%, #050000ec 100%);
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.transition-all {
+  transition: all 0.3s ease;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------*/
