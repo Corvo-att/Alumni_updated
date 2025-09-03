@@ -1,5 +1,5 @@
 .body {
-  background-image: url("resources/background.png");
+  background-image: url("resources/background.jpg");
   margin: 0%;
   padding: 0%;
   height: 100vh;
@@ -46,7 +46,7 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 .body2 {
-  background-image: url("resources/background.png");
+  background-image: url("resources/background.jpg");
   margin: 2%;
   background-size: cover;
   background-position: center;
@@ -179,8 +179,6 @@
 @media (max-width: 768px) {
   .sidebar {
     transform: translateX(-100%);
-    position: absolute;
-    z-index: 10;
   }
   .sidebar.active {
     transform: translateX(0);
@@ -213,6 +211,11 @@
     transform: translateY(0);
   }
 }
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
 .card-hover:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -238,4 +241,30 @@ input:focus,
 select:focus,
 textarea:focus {
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.ecard-hover {
+  transition: all 0.3s ease;
+}
+.ecard-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.progress-bar {
+  transition: width 1s ease-in-out;
+}
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

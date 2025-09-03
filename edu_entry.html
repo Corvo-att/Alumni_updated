@@ -11,7 +11,7 @@
 </head>
 <body class="bg-gray-50 bg-main flex">
     <!-- Side Navigation -->
-    <div class="w-64 text-white sidebar hidden md:block sticky top-0">
+    <div class="w-64 text-white sidebar absolute md:fixed h-full z-20">
         <div class="p-6 flex flex-col items-center">
         <img
           src="resources/logo_bare.png"
@@ -30,7 +30,7 @@
                     </li>
 
                     <li>
-                        <a href="#"
+                        <a href="edu_dsh_brd.html"
                         class="flex items-center px-6 py-3 text-white hover:bg-blue-700 transition">
                         <i class="fas fa-graduation-cap mr-3"></i>Qualifications</a>
                     </li>
@@ -53,16 +53,17 @@
     </div>
 
     <!-- Main Content -->
-    <div class="flex-1 container mx-auto px-4 py-8 max-w-4xl">
+    <main class="flex-1 md:ml-64">
+      <div class="container mx-auto px-4 py-8 max-w-4xl">
         <!-- Mobile Menu Button (hidden on larger screens) -->
-        <button id="mobileMenuBtn" class="md:hidden fixed top-4 left-4 z-50 bg-indigo-600 text-white p-3 rounded-full shadow-lg">
+        <button id="mobileMenuBtn" class="md:hidden fixed top-4 left-4 z-30 bg-indigo-600 text-white p-3 rounded-full shadow-lg">
             <i class="fas fa-bars"></i>
         </button>
 
         <!-- Header -->
         <header class="text-center mb-12 fade-in mt-8 md:mt-0">
             <h1 class="text-4xl font-bold text-red-700 mb-3">Academic Experience Tracker</h1>
-            <p class="text-lg text-gray-600">Document your learning journey beyond university requirements</p>
+            <p class="text-lg text-white">Document your learning journey beyond university requirements</p>
             <div class="w-24 h-1 bg-red-500 mx-auto mt-4 rounded-full"></div>
         </header>
 
@@ -285,23 +286,25 @@
       </div>
     </footer>
     </div>
+    </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Mobile Menu Toggle
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const sideNav = document.querySelector('.w-64');
+            const sideNav = document.querySelector('.sidebar');
             
-            mobileMenuBtn.addEventListener('click', function() {
-                sideNav.classList.toggle('hidden');
+            mobileMenuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                sideNav.classList.toggle('active');
             });
 
             // Close menu when clicking outside on mobile
             document.addEventListener('click', function(e) {
                 if (window.innerWidth < 768 && 
-                    !sideNav.contains(e.target) && 
-                    e.target !== mobileMenuBtn) {
-                    sideNav.classList.add('hidden');
+                    sideNav.classList.contains('active') &&
+                    !sideNav.contains(e.target)) {
+                    sideNav.classList.remove('active');
                 }
             });
             // Add Study Entry
