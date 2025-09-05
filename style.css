@@ -1,3 +1,17 @@
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
 .body {
   background-image: url("resources/background.jpg");
   margin: 0%;
